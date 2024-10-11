@@ -1,0 +1,159 @@
+.contact-section {
+  background: linear-gradient(90.21deg, #c90dc9 -5.91%, #2a04d7 111.58%);
+  padding: 60px 0;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-img-box img {
+  width: 90%;
+}
+
+.contact-form-box {
+  color: white;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-form-box h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-input-box {
+  width: 100%;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin-bottom: 8px;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+  background: #fff;
+  color: #000;
+}
+
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff; 
+}
+
+.contact-form-box input:focus::placeholder,
+.contact-form-box textarea:focus::placeholder {
+  color: #030303;
+}
+
+.contact-form-box button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 14px 48px;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-form-box button:hover {
+  color: #fff;
+  background-color: #121212;
+}
+
+body.dark-mode .contact-section {
+  background: linear-gradient(90.21deg, #333 -5.91%, #111 111.58%); /* Darker background */
+}
+
+body.dark-mode .contact-form-box h2 {
+  color: #f0f0f0; 
+}
+
+body.dark-mode .contact-form-box input,
+body.dark-mode .contact-form-box textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #f0f0f0; 
+}
+
+body.dark-mode .contact-form-box input::placeholder,
+body.dark-mode .contact-form-box textarea::placeholder {
+  color: #bfbfbf; 
+}
+
+body.dark-mode .contact-form-box input:focus,
+body.dark-mode .contact-form-box textarea:focus {
+  background: #333;
+  color: #fff; 
+}
+
+body.dark-mode .contact-form-box button {
+  background-color: #333; 
+  color: #fff; 
+}
+
+body.dark-mode .contact-form-box button:hover {
+  background-color: #f0f0f0; 
+  color: #000; 
+}
+
+@media (max-width: 768px) {
+  .contact-row {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .contact-img-box {
+    display: none; 
+  }
+
+  .contact-form-box {
+    max-width: 100%; 
+  }
+}
+
+
+
+/* Divider Styles */
+.dark-mode-divider {
+  display: none; 
+  height: 1px;
+  background-color: #333; 
+  margin: 50px 0; 
+  width: 100%; 
+}
+
+/* Show the divider only in dark mode */
+body.dark-mode .dark-mode-divider {
+  display: block; 
+  background-color: #f0f0f0; 
+}

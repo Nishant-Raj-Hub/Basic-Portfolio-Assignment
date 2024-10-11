@@ -1,0 +1,115 @@
+.portfolio-container {
+  padding: 0 20px; 
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+body.dark-mode .portfolio-container {
+  background-color: #222; 
+}
+
+.portfolio-heading {
+  font-size: 38px;
+  text-align: left;
+  border-bottom: 1px solid #1330d4;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
+}
+
+body.dark-mode .portfolio-text{
+  color: white;
+}
+
+body.dark-mode .portfolio-heading{
+  border-bottom: 1px solid #ffffff;
+}
+.portfolio-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1330d4cb;
+}
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .project-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.dark-mode .project-card {
+  background: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(252, 252, 252, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+.proj-imgbx {
+  position: relative;
+}
+
+.proj-imgbx img {
+  width: 100%;
+  height: auto;
+}
+.proj-txtx {
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
